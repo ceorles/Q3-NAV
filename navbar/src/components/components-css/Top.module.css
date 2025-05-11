@@ -12,6 +12,7 @@
     -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 0 0 30px 30px;
+    cursor: context-menu;
 }
 
 .container h1 {

@@ -6,10 +6,10 @@ import styles from './components-css/NavBar.module.css';
 import pokeballVideo from '../assets/pokeball.webm';
 
 const navItems = [
-    { label: 'Home', path: '/' },
-    { label: 'About', path: '/about' },
-    { label: 'Projects', path: '/projects' },
-    { label: 'Contact', path: '/contact' },
+    { label: 'HOME', path: '/' },
+    { label: 'ABOUT', path: '/about' },
+    { label: 'PROJECTS', path: '/projects' },
+    { label: 'CONTACT', path: '/contact' },
 ];
 
 const Angela = () => {
@@ -48,26 +48,26 @@ const Angela = () => {
                 <Link to={item.path} key={item.label} className={styles['pokeball-link']}>
                     <div className={styles['pokeball-wrapper']}>
                         <video
-                        ref={(el) => (videoRefs.current[index] = el)}
-                        className={`${styles['pokeball-video']} ${isActive ? styles['active'] : ''}`}
-                        src={pokeballVideo}
-                        muted
-                        preload="auto"
-                        playsInline
-                        controls={false}
-                        disablePictureInPicture
-                        onContextMenu={(e) => e.preventDefault()}
-                        onMouseEnter={() => {
-                            if (!isActive) {
-                            videoRefs.current[index].play();
-                            }
-                        }}
-                        onMouseLeave={() => {
-                            if (!isActive) {
-                            videoRefs.current[index].pause();
-                            videoRefs.current[index].currentTime = 0;
-                            }
-                        }}
+                            ref={(el) => (videoRefs.current[index] = el)}
+                            className={`${styles['pokeball-video']} ${isActive ? styles['active'] : ''}`}
+                            src={pokeballVideo}
+                            muted
+                            preload="auto"
+                            playsInline
+                            controls={false}
+                            disablePictureInPicture
+                            onContextMenu={(e) => e.preventDefault()}
+                        // onMouseEnter={() => {
+                        //     if (!isActive) {
+                        //     videoRefs.current[index].play();
+                        //     }
+                        // }}
+                        // onMouseLeave={() => {
+                        //     if (!isActive) {
+                        //     videoRefs.current[index].pause();
+                        //     videoRefs.current[index].currentTime = 0;
+                        //     }
+                        // }}
                         />
                         <span className={styles['nav-text']}>{item.label}</span>
                     </div>

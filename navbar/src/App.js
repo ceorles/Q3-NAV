@@ -10,6 +10,8 @@ import Projects from './sections/Projects';
 import Contact from './sections/Contact';
 import Header from './components/Top';
 
+// import Sounds from './components/Audio';
+
 // import LoadingScreen from './components/Loading';
 
 const MaryAngelaRemojo = () => {

@@ -1,9 +1,9 @@
 import React from 'react';
-import './sections-css/Her.module.css';
+import style from './sections-css/Her.module.css';
 
 const Her = () => {
     return (
-        <div>
+        <div className={style.container}>
             <h1>If all else fails, take a nap and try again.</h1>
         </div>
     );

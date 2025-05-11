@@ -1,0 +1,134 @@
+.projectsSection {
+    height: auto;
+    min-height: 100vh;
+    padding-top: 70px;
+    padding-bottom: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    box-sizing: border-box;
+    overflow-y: hidden;
+    font-family: 'Merriweather', serif;
+    transition: overflow-y 0.3s ease; 
+    cursor: context-menu;
+}
+
+.projectsSection.animateIn {
+    overflow-y: auto;
+}
+
+.projectsSection h1 {
+    font-size: 40px;
+    text-shadow: 1px 1px 2px black, 0 0 5px black;
+}
+
+.projectsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    width: 60%;
+    max-width: 1200px;
+}
+
+.projectCard {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.projectCard img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: filter 0.3s ease;
+}
+
+.projectCard a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.85);
+    color: #000;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+    white-space: nowrap;
+}
+
+.projectCard:hover img {
+    filter: blur(3px) brightness(0.7);
+}
+
+.projectCard:hover a {
+    opacity: 1;
+}
+
+.githubLink {
+    margin-top: 40px;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 2px black, 0 0 5px black;
+}
+
+.githubLink a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.githubLink a:hover {
+    color: #ffcc00;
+}
+
+.githubLink img {
+    width: 20px;
+    height: 20px;
+}
+
+@media (max-width: 768px) {
+    .projectsSection {
+        padding-top: 100px;
+    }
+    .projectsGrid {
+        width: 80%;
+    }
+}
+
+@media (max-width: 425px) {
+    .projectsSection {
+        padding-top: 80px;
+    }
+    .projectsGrid {
+        width: 100%;
+    }
+}
+
+.animateIn {
+    animation: fadeSlideUp 0.8s ease-out both;
+}
+
+@keyframes fadeSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

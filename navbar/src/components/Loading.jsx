@@ -6,7 +6,7 @@ import loadingGif from '../assets/loading.gif';
 
 const LoadingScreen = () => {
     return (
-        <div className={styles['loading-overlay']}>
+        <div className={styles['loading']}>
             <img src={loadingGif} alt="Loading..." className={styles['loading-spinner']} />
         </div>
     );

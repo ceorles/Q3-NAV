@@ -42,4 +42,5 @@ body {
     background: url('./assets/bg.gif') no-repeat center center fixed;
     background-size: cover;
     font-family: sans-serif;
+    overflow-x: hidden;
 }
