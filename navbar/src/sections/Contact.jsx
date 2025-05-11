@@ -13,7 +13,7 @@ const Contact = () => {
             id="contact"
             className={`${style.contactSection} ${animate ? style.fadeInUp : ''}`}
         >
-            <h1>Contacts</h1>
+            <h1>CONTACTS</h1>
             <ul className={style.contactIcons}>
                 <li>
                     <a href="mailto:berchescharles@gmail.com" target="_blank" rel="noopener noreferrer">

@@ -1,4 +1,3 @@
-// src/components/AudioPlayer.jsx
 import React from 'react';
 
 const Sounds = () => {

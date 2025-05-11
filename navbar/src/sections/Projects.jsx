@@ -34,7 +34,7 @@ const Projects = () => {
             id="projects"
             className={`${style.projectsSection} ${animate ? style.animateIn : ''}`}
         >
-            <h1>Projects</h1>
+            <h1>PROJECTS</h1>
             <div className={style.projectsGrid}>
                 {projects.map((project, index) => (
                     <div className={style.projectCard} key={index}>
