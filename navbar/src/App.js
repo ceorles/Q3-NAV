@@ -22,7 +22,6 @@ const MaryAngelaRemojo = () => {
     // useEffect(() => {
     //     if (location.pathname !== currentPath) {
     //         setIsLoading(true);
-
     //         const timer = setTimeout(() => {
     //             setIsLoading(false);
     //             setCurrentPath(location.pathname);
