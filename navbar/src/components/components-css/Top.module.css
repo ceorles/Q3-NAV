@@ -13,6 +13,7 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 0 0 30px 30px;
     cursor: context-menu;
+    font-family: 'Merriweather', serif;
 }
 
 .container h1 {
@@ -21,6 +22,8 @@
     font-weight: bold;
     color: #fff;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+    letter-spacing: 10px;
+    text-shadow: 1px 1px 2px black, 0 0 5px black; 
 }
 
 /* Responsive Design */
