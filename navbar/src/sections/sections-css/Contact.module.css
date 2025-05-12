@@ -77,10 +77,10 @@
 }
 
 .contactIcons li a:hover::after {
-    animation: sparkleMove 1.2s linear forwards;
+    animation: maryAngelaRemojo 1.2s linear forwards;
 }
 
-@keyframes sparkleMove {
+@keyframes maryAngelaRemojo {
     0% {
         opacity: 0;
         transform: translate(-50%, -50%) rotate(45deg) scale(0.5);
@@ -110,7 +110,7 @@
     }
 }
 
-@keyframes fadeInSmooth {
+@keyframes Lela {
     0% {
         opacity: 0;
         transform: scale(0.98);
@@ -122,5 +122,5 @@
 }
 
 .fadeInUp {
-    animation: fadeInSmooth 0.8s ease-out forwards;
+    animation: Lela 0.8s ease-out forwards;
 }

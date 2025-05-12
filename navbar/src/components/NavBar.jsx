@@ -34,7 +34,16 @@ const Angela = () => {
             const activeVideo = videoRefs.current[activeIndex];
             if (activeVideo) {
                 activeVideo.currentTime = 0;
-                activeVideo.play();
+                activeVideo.play().catch((err) => {
+                    // Ignore expected errors that can occur during race conditions
+                    if (
+                        err.name !== 'AbortError' &&
+                        err.name !== 'NotAllowedError' &&
+                        err.name !== 'InvalidStateError'
+                    ) {
+                        console.error('Error trying to play video:', err);
+                    }
+                });
             }
         }
     }, [location.pathname]);
@@ -42,37 +51,26 @@ const Angela = () => {
     return (
         <nav className={styles['pokeball-nav']}>
             {navItems.map((item, index) => {
-            const isActive = location.pathname === item.path;
+                const isActive = location.pathname === item.path;
 
-            return (
-                <Link to={item.path} key={item.label} className={styles['pokeball-link']}>
-                    <div className={styles['pokeball-wrapper']}>
-                        <video
-                            ref={(el) => (videoRefs.current[index] = el)}
-                            className={`${styles['pokeball-video']} ${isActive ? styles['active'] : ''}`}
-                            src={pokeballVideo}
-                            muted
-                            preload="auto"
-                            playsInline
-                            controls={false}
-                            disablePictureInPicture
-                            onContextMenu={(e) => e.preventDefault()}
-                        // onMouseEnter={() => {
-                        //     if (!isActive) {
-                        //     videoRefs.current[index].play();
-                        //     }
-                        // }}
-                        // onMouseLeave={() => {
-                        //     if (!isActive) {
-                        //     videoRefs.current[index].pause();
-                        //     videoRefs.current[index].currentTime = 0;
-                        //     }
-                        // }}
-                        />
-                        <span className={styles['nav-text']}>{item.label}</span>
-                    </div>
-                </Link>
-            );
+                return (
+                    <Link to={item.path} key={item.label} className={styles['pokeball-link']}>
+                        <div className={styles['pokeball-wrapper']}>
+                            <video
+                                ref={(el) => (videoRefs.current[index] = el)}
+                                className={`${styles['pokeball-video']} ${isActive ? styles['active'] : ''}`}
+                                src={pokeballVideo}
+                                muted
+                                preload="auto"
+                                playsInline
+                                controls={false}
+                                disablePictureInPicture
+                                onContextMenu={(e) => e.preventDefault()}
+                            />
+                            <span className={styles['nav-text']}>{item.label}</span>
+                        </div>
+                    </Link>
+                );
             })}
         </nav>
     );

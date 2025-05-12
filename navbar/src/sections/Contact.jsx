@@ -9,10 +9,7 @@ const Contact = () => {
     }, []);
 
     return (
-        <section
-            id="contact"
-            className={`${style.contactSection} ${animate ? style.fadeInUp : ''}`}
-        >
+        <section id="contact" className={`${style.contactSection} ${animate ? style.fadeInUp : ''}`}>
             <h1>CONTACTS</h1>
             <ul className={style.contactIcons}>
                 <li>

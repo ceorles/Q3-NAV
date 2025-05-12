@@ -1,15 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import style from './sections-css/About.module.css';
 
 const About = () => {
-    const [animate, setAnimate] = useState(false);
-
-    useEffect(() => {
-        setAnimate(true);
-    }, []);
-
     return (
-        <div className={`${style.container} ${animate ? style.fadeIn : ''}`}>
+        <div className={`${style.container} ${style.fadeIn}`}>
             <div className={style.row}>
                 <h1 className={style.header}>ABOUT</h1>
                 <div className={style.col}>

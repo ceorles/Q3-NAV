@@ -119,10 +119,10 @@
 }
 
 .animateIn {
-    animation: fadeSlideUp 0.8s ease-out both;
+    animation: GelaLela 0.8s ease-out both;
 }
 
-@keyframes fadeSlideUp {
+@keyframes GelaLela {
     0% {
         opacity: 0;
         transform: translateY(30px);
